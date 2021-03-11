@@ -34,7 +34,7 @@ router.post(
       console.log(newBuried);
 
       const grave = await Grave.findOneAndUpdate(
-        { _id: req.params.id },
+        { _id: req.params.grave },
         { $push: { buried: newBuried._id } },
         { new: true }
       );
