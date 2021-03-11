@@ -26,10 +26,12 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     try {
+      console.log(req.body);
       const newBuried = await Buried.create({
         ...req.body,
         grave: req.params.grave,
       });
+      console.log(newBuried);
 
       const grave = await Grave.findOneAndUpdate(
         { _id: req.params.id },

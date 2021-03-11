@@ -9,7 +9,7 @@ const GraveSchema = new Schema({
   },
   maxCapacity: { type: Number, required: true },
   installment: { type: Number, required: true },
-  location: { type: String, required: true },
+  identifier: { type: String, required: true },
   cemetery: { type: Schema.Types.ObjectId, ref: "Cemetery" },
   buried: [{ type: Schema.Types.ObjectId, ref: "Buried" }],
 });

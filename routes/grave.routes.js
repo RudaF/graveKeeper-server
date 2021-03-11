@@ -12,13 +12,14 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     try {
+      console.log(req.body);
       const newGrave = await Grave.create({
         ...req.body,
         cemetery: req.params.cemetery,
       });
-
+      console.log(newGrave);
       const cemetery = await Cemetery.findOneAndUpdate(
-        { _id: req.params.id },
+        { _id: req.params.cemetery },
         { $push: { graves: newGrave._id } },
         { new: true }
       );
@@ -32,7 +33,7 @@ router.post(
 
 // cRud (Read): Rota para listar todos os tumulos de um cemitério
 router.get(
-  "/:cemetary/graves",
+  "/:cemetery/graves",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     try {
@@ -51,6 +52,7 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     try {
+      console.log("oi");
       const grave = await Grave.findOne({ _id: req.params.id }).populate(
         "buried"
       );

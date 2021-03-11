@@ -124,4 +124,22 @@ router.get(
   }
 );
 
+router.get(
+  "/logout",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    try {
+      console.log(req.user);
+
+      const result = await User.findOne({ _id: req.user._id });
+      res
+        .status(200)
+        .json({ message: "This is a protected route", user: result });
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({ msg: err });
+    }
+  }
+);
+
 module.exports = router;
