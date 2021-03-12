@@ -16,6 +16,7 @@ I am a bachelor in mathematics and a student at Ironhack!
 ## Signup now!
 
 You can see the app and contact me [here!](https://gravekeeper.netlify.app)
+You can see our ReactApp on [github!](https://github.com/RudaF/graveKeeper-client)
 
 ## Find out more about this project
 
