@@ -52,7 +52,6 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     try {
-      console.log("oi");
       const grave = await Grave.findOne({ _id: req.params.id }).populate(
         "buried"
       );
