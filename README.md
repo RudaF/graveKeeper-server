@@ -1,53 +1,22 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# GraveKeeper
 
-# IronREST Boilerplate
+## About the App
 
-Esse boilerplate para API RESTful já inclui:
+GraveKeeper is an agile, effective, reliable and modern application designed for the management of cemeteries.
+This is an app built in React as a part of an Ironhack project.
 
-- Autenticação por tokens JWT usando o Passport
-- Conexão com banco de dados MongoDB usando Mongoose
-- Servidor Web usando Express pré-configurado com CORS e aceitando requisições JSON e Multipart Form
-- Upload de arquivos usando Cloudinary e Multer
+## So what is it made for?
 
-## Para Começar
+GraveKeeper let's you control all aspects of a cemetery, from graves to burials and it's installments. The user is able to add, remove and edit graves acording to it's change of status.
 
-- Faça o fork e clone deste repositório
+## About the creator
 
-## Instalação
+I am a bachelor in mathematics and a student at Ironhack!
 
-```shell
-$ npm install
-```
+## Signup now!
 
-## Desenvolvimento
+You can see the app and contact me [here!](https://gravekeeper.netlify.app)
 
-Para iniciar o servidor web localmente execute no seu terminal:
+## Find out more about this project
 
-```shell
-$ npm run dev
-```
-
-## Deploy do MongoDB
-
-1. Faça login no https://account.mongodb.com/account/login?nds=true
-2. Crie um cluster gratuito
-3. Siga as instruções e obtenha a string de conexão com o banco
-4. Crie uma variável de ambiente MONGODB_URI no Heroku com a string de conexão copiada do Atlas
-
-## Deploy no Heroku
-
-1. Faça login no Heroku e selecione seu repositório
-2. Habilite 'automatic deploys'
-3. No seu terminal, execute os seguintes comandos:
-
-```shell
-$ git add .
-$ git commit -m 'deploying'
-$ heroku git:remote -a nome-do-repo-no-heroku
-$ git push heroku master
-```
-
-4. Adicione uma variável de ambiente no Heroku para cada variável de ambiente presente no arquivo .env (não precisa criar a PORT no Heroku)
-5. Adicione a URL da sua API hospedada no Heroku nas variáveis de ambiente do app React no Netlify
-
-Happy coding! 💙
+You can find out more [here!](https://docs.google.com/presentation/d/1YYH-lFC3HmdlQyCqpqVznLZJd3tpKNb0IoNRiTlre0E/edit?usp=sharing)

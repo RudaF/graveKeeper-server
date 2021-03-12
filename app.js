@@ -6,7 +6,7 @@ require("./config/db.config")();
 const app = express();
 
 app.use(express.json());
-console.log("oi: ", process.env.REACT_APP_URL);
+
 app.use(cors({ origin: process.env.REACT_APP_URL }));
 require("./config/passport.config")(app);
 
